@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d50f3a29-e61f-4c2c-8e84-75a0bea89e74" name="r.sw-dev.ru" url="http://r.sw-dev.ru">
+        <fileTransfer rootFolder="/var/www/sw-dev/data/" accessType="SFTP" host="r.sw-dev.ru" port="22" sshConfigId="41ce78dd-fe67-4714-ac3b-c212ca0aff95" sshConfig="root@r.sw-dev.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

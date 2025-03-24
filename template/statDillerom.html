@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assets/code/js/headerScript.js"></script>
+    <script src="assets/code/js/formScript.js"></script>
+    <script src="assets/code/js/ajaxHandler.js"></script>
+
+    <title>Valvoline</title>
+</head>
+<body>
+<header>
+    <div class="top-header">
+        <a class="logo" href="/">
+            <img src="assets/images/svg/logo.svg" alt="valvolineLogo">
+        </a>
+        <div class="allBusiness">
+            <ul class="navList">
+                <li class="flexList">
+                    <a href="#" class="link">О бренде</a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="subLink">История бренда</a></li>
+                        <li><a href="#" class="subLink">Производство</a></li>
+                        <li><a href="#" class="subLink">Valvoline в России</a></li>
+                    </ul>
+                </li>
+                <li class="flexList onHover">
+                    <a href="#" class="link">Продукция</a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="subLink">Продукция</a></li>
+                        <li><a href="#" class="subLink">Моторные масла</a></li>
+                        <li><a href="#" class="subLink">Для газовых двигателей</a></li>
+                        <li><a href="#" class="subLink">Гидравлические масла</a></li>
+                        <li><a href="#" class="subLink">Для мототехники</a></li>
+                        <li><a href="#" class="subLink">Трансмиссионные масла</a></li>
+                        <li><a href="#" class="subLink">Тормозные жидкости</a></li>
+                        <li><a href="#" class="subLink">Техническая химия</a></li>
+                        <li><a href="#" class="subLink">Индустриальные масла</a></li>
+                    </ul>
+                </li>
+                <li class="flexList onHover">
+                    <a href="#" class="link">Для бизнеса</a>
+                    <ul class="subMenu">
+                        <li><a href="#" class="subLink">Сервис подбора масла</a></li>
+                        <li><a href="statDillerom.html" class="subLink">Стать дилером продукции</a></li>
+                        <li><a href="#" class="subLink">Купить как юридическое лицо</a></li>
+                    </ul>
+                </li>
+                <li class="flexList"><a href="#"
+                                        class="link">Контакты</a></li>
+            </ul>
+            <div class="toggleLang">
+                <div class="selectLang">
+                    <ul>
+                        <li>RU</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="searchOnPage">
+                <img src="assets/images/svg/loup.svg" alt="searchLoup" id="searchLoup">
+            </div>
+        </div>
+    </div>
+    <div class="searchInput" id="hidenInput">
+        <form method="get" action="#">
+            <fieldset>
+                <label for="searcher"></label>
+                <input type="text" id="searcher" title="" placeholder="Например: 5w40">
+            </fieldset>
+        </form>
+    </div>
+    <div class="bottom-header">
+        <div class="business">
+            <a href="#" class="selectOil">Подобрать масло</a>
+            <div><img src="assets/images/svg/arrow-left-right.svg" alt="arr" class="arrows"></div>
+            <a href="#" class="buyOil">Купить</a>
+            <div><img src="assets/images/svg/arrow-left-right.svg" alt="arr" class="arrows"></div>
+            <a href="#" class="forPrev">Для юридических лиц</a>
+        </div>
+        <div class="location">
+            <a href="https://yandex.ru/maps/65/novosibirsk/?ll=82.920430%2C55.030199&z=12" class="maps">Новосибирск</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="pathNav">
+    </div>
+    <div class="formWrapper">
+        <div class="info">
+            <p>Стать дилером продукции Valvoline в своём регионе</p>
+        </div>
+        <div class="flexForm">
+            <form method="post" class="dillerForm" id="myForm">
+                <div class="inputFlex">
+                    <div class="inputs">
+                        <label for="orgNameInp"></label>
+                        <input name="orgName" id="orgNameInp" placeholder="Название организации*">
+                        <label for="userDataInp"></label>
+                        <input name="userData" id="userDataInp" placeholder="Фамилия, имя представителя*">
+                        <label for="phoneInp"></label>
+                        <input name="phone" id="phoneInp" placeholder="Телефон*">
+                    </div>
+                    <div class="inputs">
+                        <label for="emailInp"></label>
+                        <input name="email" id="emailInp" placeholder="Email адрес*">
+                        <label for="regionInp"></label>
+                        <input name="region" id="regionInp" placeholder="Регион коммерческой деятельности*">
+                        <label for="companySiteInp"></label>
+                        <input name="companySite" id="companySiteInp" placeholder="Сайт компании">
+                    </div>
+                </div>
+                <div class="aboutCont">
+                    <label for="about"></label>
+                    <textarea name="aboutTextarea" id="about" placeholder="Расскажите коротко о себе"></textarea>
+                </div>
+                <div class="fileManager">
+                    <label class="input-file">
+                        <input type="file" name="file" accept="image/*">
+                        <span>Выберите файл</span>
+                    </label>
+                </div>
+                <div class="endOfForm">
+                    <div>
+                        <input type="submit" class="sendButt" id="confirmButt" disabled>
+                        <label for="agreeWithConf"></label>
+                    </div>
+                    <!--                    TODO: checkbox animation-->
+                    <div class="checkboxAgree">
+                        <div class="animContainer">
+                            <div class="animCircle">
+                                <input type="checkbox" id="agreeWithConf" onchange="changeDis()" value="true">
+                            </div>
+                        </div>
+                        <div class="agreeText">
+                            Отправляя форму, вы <a href="https://valvoline-oil.ru/politika-predostavlenie-dannykh"
+                                                   class="agreeLink">соглашаетесь</a>
+                            с <a href="https://valvoline-oil.ru/politika-predostavlenie-dannykh" class="agreeLink">политикой</a>
+                            обработки и использования персональных данных
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modalWindow" id="mWindow">
+        <div class="modalHeader">
+            <p class="winHeaderText">Ошибка заполнения формы</p>
+        </div>
+        <div class="modalMain">
+            <div class="winMainText" id="forErrors"></div>
+            <div class="winMainText" id="userDataWar"></div>
+            <div class="winMainText" id="orgNameWar"></div>
+            <div class="winMainText" id="emailWar"></div>
+            <div class="winMainText" id="phoneWar"></div>
+            <div class="winMainText" id="regionWar"></div>
+        </div>
+        <div class="modalFooter">
+            <button type="submit" class="okayButt" id="okButt">Понятно</button>
+        </div>
+    </div>
+    <div>E-commerce
+
+        E-commerce - commerce conducted over the Internet, most often via the World Wide Web. E-commerce can apply to
+        purchases made through the Web or to business-to-business activities such as inventory transfers. A customer can
+        order items from a vendor's Web site, paying with a credit card (the customer enters account information via the
+        computer) or with a previously established "cybercash" account. The transaction information is transmitted
+        (usually by modem ) to a financial institution for payment clearance and to the vendor for order fulfillment.
+        Personal and account information is kept confidential through the use of "secured transactions" that use
+        encryption technology.
+
+        In an effort to further the development of e-commerce, the federal Electronic Signatures Act (2000) established
+        uniform national standards for determining the circumstances under which contracts and notifications in
+        electronic form are legally valid. Legal standards were also specified regarding the use of an electronic
+        signature ("an electronic sound, symbol, or process, attached to or logically associated with a contract or
+        other record and executed or adopted by a person with the intent to sign the record"), but the law did not
+        specify technological standards for implementing the act. The act gave electronic signatures a legal standing
+        similar to that of paper signatures, allowing contracts and other agreements, such as those establishing a loan
+        or brokerage account, to be signed on line.
+
+        Once consumers' worries eased about on-line credit card purchases, e-commerce grew rapidly in the late 1990s. In
+        1998 on-line retail ("e-tail") sales were $7.2 billion, double the amount in 1997. On-line retail ordering
+        represented 15% of nonstore sales (which included catalogs, television sales, and direct sales) in 1998, but
+        this constituted only 1% of total retail revenues that year. Books are the most popular on-line product
+        order—with over half of Web shoppers ordering books (one on-line bookseller, Amazon.com, which started in 1995,
+        had revenues of $610 million in 1998)—followed by software, audio compact discs, and personal computers . Other
+        on-line commerce includes trading of stocks, purchases of airline tickets and groceries, and participation in
+        auctions.E-commerce
+
+        E-commerce - commerce conducted over the Internet, most often via the World Wide Web. E-commerce can apply to
+        purchases made through the Web or to business-to-business activities such as inventory transfers. A customer can
+        order items from a vendor's Web site, paying with a credit card (the customer enters account information via the
+        computer) or with a previously established "cybercash" account. The transaction information is transmitted
+        (usually by modem ) to a financial institution for payment clearance and to the vendor for order fulfillment.
+        Personal and account information is kept confidential through the use of "secured transactions" that use
+        encryption technology.
+
+        In an effort to further the development of e-commerce, the federal Electronic Signatures Act (2000) established
+        uniform national standards for determining the circumstances under which contracts and notifications in
+        electronic form are legally valid. Legal standards were also specified regarding the use of an electronic
+        signature ("an electronic sound, symbol, or process, attached to or logically associated with a contract or
+        other record and executed or adopted by a person with the intent to sign the record"), but the law did not
+        specify technological standards for implementing the act. The act gave electronic signatures a legal standing
+        similar to that of paper signatures, allowing contracts and other agreements, such as those establishing a loan
+        or brokerage account, to be signed on line.
+
+        Once consumers' worries eased about on-line credit card purchases, e-commerce grew rapidly in the late 1990s. In
+        1998 on-line retail ("e-tail") sales were $7.2 billion, double the amount in 1997. On-line retail ordering
+        represented 15% of nonstore sales (which included catalogs, television sales, and direct sales) in 1998, but
+        this constituted only 1% of total retail revenues that year. Books are the most popular on-line product
+        order—with over half of Web shoppers ordering books (one on-line bookseller, Amazon.com, which started in 1995,
+        had revenues of $610 million in 1998)—followed by software, audio compact discs, and personal computers . Other
+        on-line commerce includes trading of stocks, purchases of airline tickets and groceries, and participation in
+        auctions.E-commerce
+
+        E-commerce - commerce conducted over the Internet, most often via the World Wide Web. E-commerce can apply to
+        purchases made through the Web or to business-to-business activities such as inventory transfers. A customer can
+        order items from a vendor's Web site, paying with a credit card (the customer enters account information via the
+        computer) or with a previously established "cybercash" account. The transaction information is transmitted
+        (usually by modem ) to a financial institution for payment clearance and to the vendor for order fulfillment.
+        Personal and account information is kept confidential through the use of "secured transactions" that use
+        encryption technology.
+
+        In an effort to further the development of e-commerce, the federal Electronic Signatures Act (2000) established
+        uniform national standards for determining the circumstances under which contracts and notifications in
+        electronic form are legally valid. Legal standards were also specified regarding the use of an electronic
+        signature ("an electronic sound, symbol, or process, attached to or logically associated with a contract or
+        other record and executed or adopted by a person with the intent to sign the record"), but the law did not
+        specify technological standards for implementing the act. The act gave electronic signatures a legal standing
+        similar to that of paper signatures, allowing contracts and other agreements, such as those establishing a loan
+        or brokerage account, to be signed on line.
+
+        Once consumers' worries eased about on-line credit card purchases, e-commerce grew rapidly in the late 1990s. In
+        1998 on-line retail ("e-tail") sales were $7.2 billion, double the amount in 1997. On-line retail ordering
+        represented 15% of nonstore sales (which included catalogs, television sales, and direct sales) in 1998, but
+        this constituted only 1% of total retail revenues that year. Books are the most popular on-line product
+        order—with over half of Web shoppers ordering books (one on-line bookseller, Amazon.com, which started in 1995,
+        had revenues of $610 million in 1998)—followed by software, audio compact discs, and personal computers . Other
+        on-line commerce includes trading of stocks, purchases of airline tickets and groceries, and participation in
+        auctions.E-commerce
+
+        E-commerce - commerce conducted over the Internet, most often via the World Wide Web. E-commerce can apply to
+        purchases made through the Web or to business-to-business activities such as inventory transfers. A customer can
+        order items from a vendor's Web site, paying with a credit card (the customer enters account information via the
+        computer) or with a previously established "cybercash" account. The transaction information is transmitted
+        (usually by modem ) to a financial institution for payment clearance and to the vendor for order fulfillment.
+        Personal and account information is kept confidential through the use of "secured transactions" that use
+        encryption technology.
+
+        In an effort to further the development of e-commerce, the federal Electronic Signatures Act (2000) established
+        uniform national standards for determining the circumstances under which contracts and notifications in
+        electronic form are legally valid. Legal standards were also specified regarding the use of an electronic
+        signature ("an electronic sound, symbol, or process, attached to or logically associated with a contract or
+        other record and executed or adopted by a person with the intent to sign the record"), but the law did not
+        specify technological standards for implementing the act. The act gave electronic signatures a legal standing
+        similar to that of paper signatures, allowing contracts and other agreements, such as those establishing a loan
+        or brokerage account, to be signed on line.
+
+        Once consumers' worries eased about on-line credit card purchases, e-commerce grew rapidly in the late 1990s. In
+        1998 on-line retail ("e-tail") sales were $7.2 billion, double the amount in 1997. On-line retail ordering
+        represented 15% of nonstore sales (which included catalogs, television sales, and direct sales) in 1998, but
+        this constituted only 1% of total retail revenues that year. Books are the most popular on-line product
+        order—with over half of Web shoppers ordering books (one on-line bookseller, Amazon.com, which started in 1995,
+        had revenues of $610 million in 1998)—followed by software, audio compact discs, and personal computers . Other
+        on-line commerce includes trading of stocks, purchases of airline tickets and groceries, and participation in
+        auctions.
+    </div>
+</main>
+</body>
+<script>
+
+</script>
+</html>
